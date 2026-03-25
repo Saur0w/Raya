@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
 import Image from "next/image";
 import Link from "next/link";
+import {ready} from "next/dist/build/output/log";
 
 gsap.registerPlugin(SplitText, useGSAP);
 
@@ -14,6 +15,12 @@ export default function Landing() {
     const landingRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
+        if (!ready) return;
+
+        const split = new SplitText(".heading", {
+            type: "lines, words",
+            linesClass: styles.splitLine
+        });
 
     }, {
         scope: landingRef
