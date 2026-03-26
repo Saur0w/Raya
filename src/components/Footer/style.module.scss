@@ -2,14 +2,14 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  height    : 60px;
-  width     : 100vw;
-  display   : grid;
+  height: 60px;
+  width: 100vw;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   background: transparent;
-  z-index   : 10;
-  padding-left : 56px;
+  z-index: 10;
+  padding-left: 56px;
   padding-right: 64px;
 
   a {
@@ -26,8 +26,8 @@
 }
 
 .left {
-  justify-self : start;
-  line-height  : 1;
+  justify-self: start;
+  line-height: 1;
   letter-spacing: 0;
 }
 
