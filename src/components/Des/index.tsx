@@ -9,10 +9,14 @@ import { SplitText } from "gsap/SplitText";
 
 gsap.registerPlugin(SplitText, useGSAP, ScrollTrigger);
 
-export default function Des() {
+interface DesProps {
+    ready?: boolean;
+}
+
+export default function Des({ ready = true }: DesProps) {
     return (
         <section className={styles.des}>
-
+            Hello world
         </section>
     )
 }
