@@ -14,7 +14,6 @@ export default function Footer() {
             <div className={styles.right}>
                 <Link href="/">SCROLL DOWN</Link>
             </div>
-
         </footer>
     );
 }
