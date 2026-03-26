@@ -1,0 +1,68 @@
+$line     : #D0CCC3;
+$header-h : 40px;
+$footer-h : 40px;
+$gutter   : 40px;
+
+.root {
+  position: relative;
+  width   : 100%;
+}
+
+.gridOverlay {
+  position      : fixed;
+  inset         : 0;
+  pointer-events: none;
+  z-index       : 50;
+
+  .hLineTop {
+    position  : absolute;
+    top       : $header-h;
+    left      : $gutter;
+    right     : $gutter;
+    height    : 1px;
+    background: $line;
+  }
+
+  .hLineBottom {
+    position  : absolute;
+    bottom    : $footer-h;
+    left      : $gutter;
+    right     : $gutter;
+    height    : 1px;
+    background: $line;
+  }
+
+  .vLineLeft {
+    position: absolute; left: $gutter;
+    top: 0; bottom: 0; width: 1px; background: $line;
+  }
+
+  .vLineMidLeft {
+    position  : absolute;
+    left      : calc(694 / 1440 * 100vw - #{$gutter} / 2);
+    top: 0; bottom: 0; width: 1px; background: $line;
+  }
+
+  .vLineMidLeft2 {
+    position  : absolute;
+    left      : calc(710 / 1440 * 100vw - #{$gutter} / 2);
+    top: 0; bottom: 0; width: 1px; background: $line;
+  }
+
+  .vLineMidRight {
+    position  : absolute;
+    left      : calc(730 / 1440 * 100vw - #{$gutter} / 2);
+    top: 0; bottom: 0; width: 1px; background: $line;
+  }
+
+  .vLineMidRight2 {
+    position  : absolute;
+    left      : calc(746 / 1440 * 100vw - #{$gutter} / 2);
+    top: 0; bottom: 0; width: 1px; background: $line;
+  }
+
+  .vLineRight {
+    position: absolute; right: $gutter;
+    top: 0; bottom: 0; width: 1px; background: $line;
+  }
+}
