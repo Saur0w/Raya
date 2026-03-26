@@ -90,8 +90,8 @@ export default function Landing({ ready = true }: LandingProps) {
                 <p className={styles.para} ref={paraRef}>
                     For when the day finally slows down.<br />
                     When the room gets quiet and everything that<br />
-                    mattered stops mattering.<br />
-                    Raya was made for exactly this.
+                    mattered stops mattering.
+                    Raya was made for<br /> exactly this.
                 </p>
             </div>
 

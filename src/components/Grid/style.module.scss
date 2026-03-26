@@ -66,3 +66,15 @@ $gutter   : 40px;
     top: 0; bottom: 0; width: 1px; background: $line;
   }
 }
+
+.vLineMidLeft,
+.vLineMidLeft2,
+.vLineMidRight,
+.vLineMidRight2 {
+  opacity   : 1;
+  transition: opacity 0.6s ease;
+}
+
+.midHidden {
+  opacity: 0;
+}
