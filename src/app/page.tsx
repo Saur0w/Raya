@@ -9,6 +9,7 @@ import Lenis from "lenis";
 import Grid from "@/components/Grid";
 import Chap from "@/components/Chap";
 import Matter from "@/components/Matte";
+import Lounge from "@/components/Lounge";
 
 export default function Home() {
     const [ready, setReady]           = useState(false);
@@ -54,6 +55,7 @@ export default function Home() {
                         </div>
                         <Chap ready={ready} />
                         <Matter ready={ready} />
+                        <Lounge ready={ready} />
                     </>
                 )}
             </div>
