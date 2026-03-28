@@ -119,7 +119,6 @@ export default function Outro({ ready = true }: OutroProps) {
 
             <div className={styles.left}>
                 <h2 className={styles.heading}>
-                    {/* only this span gets SplitText */}
                     <span ref={textRef}>
                         Raya is<br />
                         available<br />
@@ -153,7 +152,7 @@ export default function Outro({ ready = true }: OutroProps) {
                 <div className={styles.links}>
                     <div className={styles.linkWrap}>
                         <Link
-                            href="https://lovehouse.com"
+                            href="/"
                             className={styles.link}
                             ref={link1Ref}
                             target="_blank"
@@ -164,7 +163,6 @@ export default function Outro({ ready = true }: OutroProps) {
                     <div className={styles.linkWrap}>
                         <Link
                             href="/"
-                            className={styles.link}
                             ref={link2Ref}
                         >
                             Get in touch ↗

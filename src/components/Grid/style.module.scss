@@ -2,6 +2,7 @@ $line     : #D0CCC3;
 $header-h : 40px;
 $footer-h : 40px;
 $gutter   : 40px;
+$mid-break: 768px;
 
 .root {
   position: relative;
@@ -38,26 +39,26 @@ $gutter   : 40px;
   }
 
   .vLineMidLeft {
-    position  : absolute;
-    left      : calc(694 / 1440 * 100vw - #{$gutter} / 2);
+    position: absolute;
+    left    : calc(694 / 1440 * 100vw - #{$gutter} / 2);
     top: 0; bottom: 0; width: 1px; background: $line;
   }
 
   .vLineMidLeft2 {
-    position  : absolute;
-    left      : calc(710 / 1440 * 100vw - #{$gutter} / 2);
+    position: absolute;
+    left    : calc(710 / 1440 * 100vw - #{$gutter} / 2);
     top: 0; bottom: 0; width: 1px; background: $line;
   }
 
   .vLineMidRight {
-    position  : absolute;
-    left      : calc(730 / 1440 * 100vw - #{$gutter} / 2);
+    position: absolute;
+    left    : calc(730 / 1440 * 100vw - #{$gutter} / 2);
     top: 0; bottom: 0; width: 1px; background: $line;
   }
 
   .vLineMidRight2 {
-    position  : absolute;
-    left      : calc(746 / 1440 * 100vw - #{$gutter} / 2);
+    position: absolute;
+    left    : calc(746 / 1440 * 100vw - #{$gutter} / 2);
     top: 0; bottom: 0; width: 1px; background: $line;
   }
 
@@ -73,6 +74,11 @@ $gutter   : 40px;
 .vLineMidRight2 {
   opacity   : 1;
   transition: opacity 0.6s ease;
+
+  @media (max-width: $mid-break) {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .midHidden {

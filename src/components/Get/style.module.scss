@@ -34,10 +34,8 @@ $line  : #D0CCC3;
   letter-spacing: -0.025em;
   color         : $ink;
   margin        : 0;
-  // no overflow: hidden — would clip the underline
 }
 
-// clips "Essesi Studio" for the yPercent slide-up
 .studioWrap {
   display : block;
   overflow: hidden;
@@ -91,26 +89,25 @@ $line  : #D0CCC3;
 }
 
 .links {
-  display       : flex;
+  display: flex;
   flex-direction: column;
-  align-items   : center;
-  gap           : 16px;
+  align-items: center;
+  gap: 16px;
 }
 
 .linkWrap {
   overflow: hidden;
+  a {
+    display: block;
+    font-family: "Suisse Int'l Condensed Trial", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: $ink;
+    text-decoration : underline;
+    text-underline-offset: 3px;
+    line-height: 1;
+    transition: opacity 0.2s ease;
+    &:hover { opacity: 0.5; }
+  }
 }
 
-.link {
-  display              : block;
-  font-family          : "PP Neue Montreal", sans-serif;
-  font-size            : clamp(14px, 1.4vw, 18px);
-  font-weight          : 400;
-  color                : $ink;
-  text-decoration      : underline;
-  text-underline-offset: 3px;
-  line-height          : 1;
-  transition           : opacity 0.2s ease;
-
-  &:hover { opacity: 0.5; }
-}

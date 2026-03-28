@@ -14,7 +14,6 @@ export default function Grid({ children, hideMidLines = false }: GridProps) {
                 <div className={styles.hLineBottom} />
                 <div className={styles.vLineLeft} />
 
-                {/* always in DOM — opacity animated via class */}
                 <div className={`${styles.vLineMidLeft}  ${hideMidLines ? styles.midHidden : ""}`} />
                 <div className={`${styles.vLineMidLeft2} ${hideMidLines ? styles.midHidden : ""}`} />
                 <div className={`${styles.vLineMidRight} ${hideMidLines ? styles.midHidden : ""}`} />

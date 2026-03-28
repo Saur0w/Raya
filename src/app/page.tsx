@@ -13,6 +13,7 @@ import Lounge from "@/components/Lounge";
 import Foot from "@/components/Get";
 import Services from "@/components/services";
 import Maker from "@/components/Maker";
+import About from "@/components/About";
 
 export default function Home() {
     const [ready, setReady]           = useState(false);
@@ -59,6 +60,7 @@ export default function Home() {
                         <Chap ready={ready} />
                         <Matter ready={ready} />
                         <Lounge ready={ready} />
+                        <About ready={ready} />
                         <Maker ready={ready} />
                         <Services ready={ready} />
                         <Foot ready={ready} />
