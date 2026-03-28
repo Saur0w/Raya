@@ -1,0 +1,92 @@
+$bg   : #f7f7f7;
+$ink  : #1E1E1E;
+$muted: #6B6960;
+
+.splitLine {
+  overflow: hidden !important;
+  display : block;
+}
+
+.maker {
+  position  : relative;
+  width     : 100vw;
+  min-height: 100dvh;
+  background: $bg;
+  display   : grid;
+  grid-template-columns: 1fr 1fr;
+  padding   : 40px 40px 80px;
+  overflow  : hidden;
+}
+
+.left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 199px 24px 0 155px;
+}
+
+.imgWrap {
+  position: relative;
+  width: 325px;
+  height: 408px;
+  overflow: hidden;
+  clip-path: inset(0% 0% 100% 0%);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.imgInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  img {
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.titleBlock {
+  position: relative;
+  margin-top: -70px;
+  margin-left: 230px;
+  text-align: left;
+  z-index: 20;
+}
+
+.titleLineWrap {
+  overflow: hidden;
+}
+
+.titleWord {
+  display: block;
+  font-family: "Suisse Int'l Condensed Trial", sans-serif;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1;
+  font-style: normal;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: $ink;
+  text-align: left;
+}
+
+.right {
+  display: flex;
+  flex-direction : column;
+  justify-content: flex-start;
+  gap: 48px;
+  padding: 56px 300px 0 30px;
+}
+
+.para {
+  font-family: "Suisse Works Trial", serif;
+  font-size: clamp(15px, 1.5vw, 20px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: $ink;
+  margin: 0;
+  overflow: hidden;
+}
