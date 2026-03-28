@@ -1,0 +1,96 @@
+$bg    : #f7f7f7;
+$ink   : #1E1E1E;
+$muted : #6B6960;
+$line  : #D0CCC3;
+
+.services {
+  position  : relative;
+  width     : 100vw;
+  min-height: 100dvh;
+  background: $bg;
+  display   : grid;
+  grid-template-columns: 1fr 1fr;
+  padding   : 40px 40px 80px;
+}
+
+.left {
+  display : flex;
+  flex-direction : column;
+  padding-top: 159px;
+  padding-left: 155px;
+  padding-right  : 32px;
+  gap            : 0;
+
+  span + span {
+    margin-top: 220px;
+  }
+}
+
+.label {
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: $ink;
+  line-height: 1.45;
+}
+
+.newsLabel {
+  margin-left: 285px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-top: 159px;
+  padding-right: 40px;
+  padding-left: 30px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  list-style: none;
+  margin    : 0;
+  padding   : 0;
+  display   : flex;
+  flex-direction: column;
+  gap       : 0;
+}
+
+.item {
+  font-family: "Suisse Works Trial", "serif";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $ink;
+  overflow: hidden;
+}
+
+.newsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.newsItem {
+  font-family: "Suisse Works Trial", "serif";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $ink;
+  overflow: hidden;
+  cursor: default;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $muted;
+  }
+}

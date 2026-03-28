@@ -10,6 +10,8 @@ import Grid from "@/components/Grid";
 import Chap from "@/components/Chap";
 import Matter from "@/components/Matte";
 import Lounge from "@/components/Lounge";
+import Foot from "@/components/Get";
+import Services from "@/components/services";
 
 export default function Home() {
     const [ready, setReady]           = useState(false);
@@ -56,6 +58,8 @@ export default function Home() {
                         <Chap ready={ready} />
                         <Matter ready={ready} />
                         <Lounge ready={ready} />
+                        <Services ready={ready} />
+                        <Foot ready={ready} />
                     </>
                 )}
             </div>

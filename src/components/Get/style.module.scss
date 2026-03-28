@@ -1,6 +1,116 @@
-.foot {
+$bg    : #f7f7f7;
+$ink   : #1E1E1E;
+$muted : #8A877F;
+$line  : #D0CCC3;
+
+.splitLine {
+  overflow: hidden !important;
+  display : block;
+}
+
+.outro {
+  position  : relative;
+  width     : 100vw;
+  height    : 100dvh;
+  background: $bg;
+  display   : grid;
+  grid-template-columns: 1fr 1fr;
+  padding   : 40px;
+  overflow  : hidden;
+}
+
+.left {
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-between;
+  padding        : 106px 32px 12px 56px;
+}
+
+.heading {
+  font-family   : "Suisse Works Trial", serif;
+  font-size     : 96px;
+  font-weight   : 500;
+  line-height   : 1.08;
+  letter-spacing: -0.025em;
+  color         : $ink;
+  margin        : 0;
+  // no overflow: hidden — would clip the underline
+}
+
+// clips "Essesi Studio" for the yPercent slide-up
+.studioWrap {
+  display : block;
+  overflow: hidden;
+}
+
+.studio {
+  position  : relative;
+  display   : inline-block;
+  white-space: nowrap;
+  text-decoration: underline;
+}
+
+
+.credit {
+  display      : block;
+  font-family  : "PP Neue Montreal", sans-serif;
+  font-size    : 12px;
+  font-weight  : 400;
+  color        : $muted;
+  line-height  : 1;
+}
+
+.right {
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  gap            : 52px;
+  padding-left   : 32px;
+}
+
+.imgWrap {
+  position    : relative;
+  width       : clamp(180px, 26vw, 320px);
+  aspect-ratio: 4 / 3;
+  overflow    : hidden;
+  clip-path   : inset(0% 0% 100% 0%);
+}
+
+.imgInner {
   position: relative;
-  width: 100vw;
-  height: 100dvh;
-  background: #f7f7f7;
+  width   : 100%;
+  height  : 100%;
+
+  img {
+    object-fit     : contain;
+    object-position: center;
+    width          : 100%;
+    height         : 100%;
+  }
+}
+
+.links {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  gap           : 16px;
+}
+
+.linkWrap {
+  overflow: hidden;
+}
+
+.link {
+  display              : block;
+  font-family          : "PP Neue Montreal", sans-serif;
+  font-size            : clamp(14px, 1.4vw, 18px);
+  font-weight          : 400;
+  color                : $ink;
+  text-decoration      : underline;
+  text-underline-offset: 3px;
+  line-height          : 1;
+  transition           : opacity 0.2s ease;
+
+  &:hover { opacity: 0.5; }
 }
