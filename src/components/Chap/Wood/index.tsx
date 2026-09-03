@@ -18,12 +18,10 @@ export default function Wood() {
         () => {
             const wrapper = woodRef.current?.closest(`[class*="landingWrapper"]`);
             const isPinned = !!wrapper;
-            const scroller = woodRef.current?.closest(`[class*="contentWrapper"]`) || undefined;
 
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: isPinned ? wrapper : woodRef.current,
-                    scroller: scroller,
                     start: isPinned ? "top top" : "top 75%",
                     end: isPinned ? "+=200%" : "bottom 20%",
                     scrub: isPinned ? 0.5 : false,
@@ -122,9 +120,8 @@ export default function Wood() {
             <div className={styles.left}>
                 <div className={styles.heading}>
                     <h1>
-                        Walnut wood, shaped into a single continuous<br className={styles.desktopBr} />
-                        curve. No joints. No interruptions. Just form<br className={styles.desktopBr} />
-                        following the body.
+                        Walnut wood, shaped into a single continuous curve. No joints. No
+                        interruptions. Just form following the body.
                     </h1>
                 </div>
 
@@ -157,8 +154,6 @@ export default function Wood() {
                             src="/images/wood.jpg"
                             alt="Raya lounge chair"
                             fill
-                            sizes="(max-width: 900px) 100vw, 50vw"
-                            priority
                         />
                     </div>
                 </div>

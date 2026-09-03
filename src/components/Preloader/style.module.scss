@@ -1,0 +1,41 @@
+$font-suisse: var(--font-suisse), sans-serif;
+$margin-x: 2.5rem;
+$margin-y: 2.5rem;
+$spine-gap: 0.75rem;
+$page-inner-margin: 0.5rem;
+$content-padding: 1.5rem;
+
+.preloader {
+  position: fixed;
+  z-index: 99999;
+  height: 100vh;
+  width: 100vw;
+  background: #F7F7F7;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  pointer-events: none;
+  overflow: hidden;
+
+  .left,
+  .right {
+    position: absolute;
+
+    h1 {
+      font-family: $font-suisse;
+      font-size: 80px;
+      font-weight: 600;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #000;
+    }
+  }
+
+  .left {
+    top: calc(#{$margin-y} + #{$content-padding});
+    left: calc(#{$margin-x} + #{$content-padding});
+  }
+
+  .right {
+    top: calc(#{$margin-y} + #{$content-padding});
+    left: calc(50% + #{$spine-gap} + #{$page-inner-margin} + #{$content-padding});
+  }
+}
