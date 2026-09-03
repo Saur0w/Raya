@@ -7,6 +7,12 @@ $margin-y: 2.5rem;
 $spine-gap: 0.75rem;
 $page-inner-margin: 1.2rem;
 
+// Responsive breakpoint variables
+$margin-x-tablet: 1.5rem;
+$margin-y-tablet: 1.5rem;
+$margin-x-mobile: 1rem;
+$margin-y-mobile: 1rem;
+
 .hud {
   position: fixed;
   inset: 0;
@@ -116,6 +122,79 @@ $page-inner-margin: 1.2rem;
 
     &.midRightOuter {
       left: calc(50% + #{$spine-gap} + #{$page-inner-margin});
+    }
+  }
+
+  // ── Responsive: reduce margins on tablet ──
+  @media (max-width: 1024px) {
+    .paperBorder {
+      &.top { height: $margin-y-tablet; }
+      &.bottom { height: $margin-y-tablet; }
+      &.left {
+        top: $margin-y-tablet;
+        bottom: $margin-y-tablet;
+        width: $margin-x-tablet;
+      }
+      &.right {
+        top: $margin-y-tablet;
+        bottom: $margin-y-tablet;
+        width: $margin-x-tablet;
+      }
+    }
+
+    .lineHorizontal {
+      &.topLeft {
+        top: $margin-y-tablet;
+        left: $margin-x-tablet;
+      }
+      &.topRight {
+        top: $margin-y-tablet;
+        right: $margin-x-tablet;
+      }
+      &.bottomLeft {
+        bottom: $margin-y-tablet;
+        left: $margin-x-tablet;
+      }
+      &.bottomRight {
+        bottom: $margin-y-tablet;
+        right: $margin-x-tablet;
+      }
+    }
+
+    .lineVertical {
+      &.outerLeft { left: $margin-x-tablet; }
+      &.outerRight { right: $margin-x-tablet; }
+
+      // Hide center spine lines on tablet
+      &.midLeftOuter,
+      &.midLeftInner,
+      &.midRightInner,
+      &.midRightOuter {
+        display: none;
+      }
+    }
+  }
+
+  // ── Responsive: hide all lines on mobile ──
+  @media (max-width: 768px) {
+    .lineHorizontal,
+    .lineVertical {
+      display: none;
+    }
+
+    .paperBorder {
+      &.top { height: $margin-y-mobile; }
+      &.bottom { height: $margin-y-mobile; }
+      &.left {
+        top: $margin-y-mobile;
+        bottom: $margin-y-mobile;
+        width: $margin-x-mobile;
+      }
+      &.right {
+        top: $margin-y-mobile;
+        bottom: $margin-y-mobile;
+        width: $margin-x-mobile;
+      }
     }
   }
 }
