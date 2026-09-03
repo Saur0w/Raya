@@ -6,10 +6,10 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./style.module.scss";
 import Alum from "./Alum";
-import Horizontal from "@/components/chap/Horizontal";
-import Matte from "@/components/chap/Matte";
+import Horizontal from "@/components/Chap/Horizontal";
+import Matte from "@/components/Chap/Matte";
 import Lounge from "./Lounge";
-import Last from "@/components/chap/News";
+import Last from "@/components/Chap/News";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
