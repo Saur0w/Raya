@@ -1,0 +1,173 @@
+$paper-color: #F7F7F7;
+$line-color: #9E9E9E;
+$line-thickness: 1px;
+
+$margin-x: 2.5rem;
+$margin-y: 2.5rem;
+$spine-gap: 0.75rem;
+$page-inner-margin: 1.2rem;
+$content-padding: 2rem;
+
+:root {
+  --paper-color: #{$paper-color};
+  --line-color: #{$line-color};
+  --line-thickness: #{$line-thickness};
+  --margin-x: #{$margin-x};
+  --margin-y: #{$margin-y};
+  --spine-gap: #{$spine-gap};
+  --page-inner-margin: #{$page-inner-margin};
+  --content-padding: #{$content-padding};
+}
+
+.hud {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999999;
+  overflow: hidden;
+
+  .paperBorder {
+    position: absolute;
+    background-color: $paper-color;
+    z-index: 1;
+
+    &.top {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: $margin-y;
+    }
+
+    &.bottom {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: $margin-y;
+    }
+
+    &.left {
+      top: $margin-y;
+      bottom: $margin-y;
+      left: 0;
+      width: $margin-x;
+    }
+
+    &.right {
+      top: $margin-y;
+      bottom: $margin-y;
+      right: 0;
+      width: $margin-x;
+    }
+  }
+
+  .lineHorizontal {
+    position: absolute;
+    height: $line-thickness;
+    background-color: $line-color;
+    z-index: 2;
+
+    &.topLeft {
+      top: $margin-y;
+      left: $margin-x;
+      right: calc(50% + #{$spine-gap});
+      transform-origin: left center;
+    }
+
+    &.topRight {
+      top: $margin-y;
+      left: calc(50% + #{$spine-gap});
+      right: $margin-x;
+      transform-origin: right center;
+    }
+
+    &.bottomLeft {
+      bottom: $margin-y;
+      left: $margin-x;
+      right: calc(50% + #{$spine-gap});
+      transform-origin: left center;
+    }
+
+    &.bottomRight {
+      bottom: $margin-y;
+      left: calc(50% + #{$spine-gap});
+      right: $margin-x;
+      transform-origin: right center;
+    }
+  }
+
+  .lineVertical {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: $line-thickness;
+    background-color: $line-color;
+    transform-origin: center top;
+    z-index: 2;
+
+    &.outerLeft {
+      left: $margin-x;
+    }
+
+    &.outerLeftInner {
+      left: calc(#{$margin-x} + #{$page-inner-margin});
+    }
+
+    &.midLeftOuter {
+      left: calc(50% - #{$spine-gap} - #{$page-inner-margin});
+    }
+
+    &.midLeftInner {
+      left: calc(50% - #{$spine-gap});
+    }
+
+    &.midRightInner {
+      left: calc(50% + #{$spine-gap});
+    }
+
+    &.midRightOuter {
+      left: calc(50% + #{$spine-gap} + #{$page-inner-margin});
+    }
+
+    &.outerRightInner {
+      right: calc(#{$margin-x} + #{$page-inner-margin});
+    }
+
+    &.outerRight {
+      right: $margin-x;
+    }
+  }
+}
+
+.spread {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+
+  .pageLeft {
+    position: absolute;
+    top: $margin-y;
+    bottom: $margin-y;
+    left: $margin-x;
+    right: calc(50% + #{$spine-gap});
+    padding: $content-padding;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pageRight {
+    position: absolute;
+    top: $margin-y;
+    bottom: $margin-y;
+    left: calc(50% + #{$spine-gap});
+    right: $margin-x;
+    padding: $content-padding;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+}
