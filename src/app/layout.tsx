@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Grid from "@/ui/Grid";
 import "./globals.css";
+import React from "react";
 
 const suisseIntlCond = localFont({
   src: "../../public/fonts/SuisseIntlCondTrial.woff2",

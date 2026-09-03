@@ -1,0 +1,18 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #F7F7F7;
+  @include flex-center;
+  h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
