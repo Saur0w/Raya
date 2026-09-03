@@ -1,0 +1,88 @@
+$font-suisse: var(--font-suisse), sans-serif;
+
+@mixin image {
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.lounge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  background: #f7f7f7;
+  color: #1E1E1E;
+
+  .body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    .left {
+      position: relative;
+      height: 100%;
+      width: 50%;
+      overflow: hidden;
+      padding-right: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .imageWrapper {
+        position: relative;
+        width: 100%;
+        max-width: 622px;
+        aspect-ratio: 622 / 788;
+        @include image;
+      }
+    }
+    .right {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      height: 100%;
+      width: 50%;
+      overflow: hidden;
+      padding-top: 350px;
+      padding-left: 200px;
+      .heading {
+        position: relative;
+        width: 293px;
+        height: auto;
+        margin-left: 300px;
+        p {
+          font-family: "Kumbh Sans", sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.35em;
+
+        }
+      }
+
+      .imageWrapper {
+        position: relative;
+        height: 266px;
+        width: 210px;
+      }
+    }
+
+    .mainHeading {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 120px;
+      z-index: 999999999;
+      h1 {
+        font-family: $font-suisse;
+      }
+    }
+  }
+}

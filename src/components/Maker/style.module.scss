@@ -1,0 +1,83 @@
+$font-suisse: var(--font-suisse), sans-serif;
+$font-suisseWorks: var(--font-suisseWorks), sans-serif;
+
+.maker {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  .body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    .left {
+      position: relative;
+      height: 100%;
+      width: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .imageWrapper {
+        position: relative;
+        height: 406px;
+        width: 325px;
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .heading {
+        position: absolute;
+        bottom: 10rem;
+        right: 10rem;
+        width: 210px;
+        height: auto;
+        h1 {
+          color: #1E1E1E;
+          text-transform: uppercase;
+          font-size: 72px;
+          font-family: $font-suisse;
+        }
+
+      }
+    }
+
+    .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      position: relative;
+      height: 100%;
+      width: 50%;
+      padding-left: 100px;
+      flex-direction: column;
+      .para {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        p {
+          font-size: 20px;
+          font-family: $font-suisseWorks;
+          line-height: 1.2em
+        }
+
+        .first,
+        .second {
+          width: 65%;
+          height: auto;
+        }
+
+        .third {
+          margin-top: 50px;
+          width: 80%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
